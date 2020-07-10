@@ -41,4 +41,5 @@ class Hangout(commands.Cog):
 
     @commands.command()
     async def endpoll(self,ctx,message:Message):
-        print(message)
+        for react in message.reactions:
+            await message.remove_reaction(react.emoji,self.bot.user)
