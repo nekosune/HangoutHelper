@@ -38,3 +38,7 @@ class Hangout(commands.Cog):
         emoji += content
         for emoj in emoji:
             await message.add_reaction(emoj)
+
+    @commands.command()
+    async def endpoll(self,ctx,message:Message):
+        print(message)
